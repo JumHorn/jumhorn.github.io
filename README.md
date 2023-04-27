@@ -1,12 +1,8 @@
-# important
-
-    This Repo move to https://github.com/JumHorn/jumhorn.github.io
 # This Repo
 
     用HEXO将我用markdown写的文档变成博客
 
 ## 下载主题
-    
 ```shell
 git clone https://github.com/jerryc127/hexo-theme-butterfly.git themes/butterfly
 ```
