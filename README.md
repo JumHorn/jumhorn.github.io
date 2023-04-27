@@ -21,9 +21,5 @@ hexo server # hexo server -p 54001 --ip 127.0.0.1(自定义端口和IP)
 
 > https://hexo.io/docs/github-pages.html
 
-## FAQ
-
-1. 为什么创建blog，而不是直接使用jumhorn.github.io
-
-    我不喜欢直接写html，都是写markdown后生成html，虽然hexo可以部署到github pages
-    但是会丢失我的提交记录，所以另开一个Repo来写博客
+    目前该方法将github page部署在gh-pages分之上，该方法不是很好，
+    因为部署的文件不需要做版本管理，该方法有待优化
