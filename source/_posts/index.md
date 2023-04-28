@@ -50,16 +50,6 @@ sticky: true
 
     14703386881
 
-## 信息展示
-
-* 共享WIFI贴
-
-    http://wifi.rsgnssd.cn/dd2.html
-
 ## USDT(TRC20)
 
     TLRyqMj1Z5yrzY7SkXk3jbPLG3Lb5mdQK8
-
-## 随机字符
-    $$qr!KkjsA@2egZ
-    XK8RshATvXPAPF3
