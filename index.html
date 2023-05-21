@@ -52,7 +52,7 @@
   isHome: true,
   isHighlightShrink: false,
   isToc: false,
-  postUpdate: '2023-04-30 08:08:12'
+  postUpdate: '2023-05-21 02:32:22'
 }</script><noscript><style type="text/css">
   #nav {
     opacity: 1
@@ -211,127 +211,153 @@ Android程序服务端
 
 USDT(TRC20)TLRyqMj1Z5yrzY7SkXk3jbPLG3Lb5mdQK8
 
-</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/04/30/gitlab-remote-development/" title="gitlab创建远程开发环境，将gitlab作为前端">gitlab创建远程开发环境，将gitlab作为前端</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-04-30T13:51:28.000Z" title="Created 2023-04-30 13:51:28">2023-04-30</time></span></div><div class="content">GitLab Remote Developmentgithub,gitlab都支持webide,但是使用webide时无法使用shell命令,
-恰好由于gitlab支持远程开发，所以将vps算力提供给gitlab，是的webide可以编译，调试
+</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/05/21/DDOS/" title="一条命令实现DDOS">一条命令实现DDOS</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-05-21T02:32:11.000Z" title="Created 2023-05-21 02:32:11">2023-05-21</time></span></div><div class="content">一条命令实现DDOS攻击这个工具可太强了，一会就把路由器发崩溃了，局域网的电脑也连不上了
 
 工具
-https://docs.gitlab.com/ee/user/project/remote_development/
+hping3
 
-gitlab直接使用docker部署
+123456# debianapt install hping3# macbrew install hping# centosbrew install hping3
 
-配置
-申请域名证书
-开启docker镜像
-获取token1docker exec my-environment cat TOKEN
+SYN DDOS攻击工具使用方法
 
-使用
-打开任意webide
-连接 domain.com:3443
+12345# -S specifies sending SYN packets# -p 80 targets port 80# -i u20 waits 20 microseconds between packets = 50,000# packets per secondsudo hping3 -i u20 -S -p 80 -c 50000 ip(x.x.x.x)
 
-FAQ目前没有给出源码，只给出了docker部署
+隐藏自身IP地址模拟出多个IP攻击主机的情况
+其实SYN攻击，只需要发送SYN包，返回的包根本不处理
+所以SYN包的source_address可以随机填写
 
+123# --rand-source    random source address mode# --flood	   sent packets  ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/05/21/README/" title="仅为乐趣而写博客">仅为乐趣而写博客</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-05-21T02:32:11.000Z" title="Created 2023-05-21 02:32:11">2023-05-21</time></span></div><div class="content">blogjust for fun
+ideas
+ 
+安装和使用anbox
 
-exited (134)
- 在centos上跑ubuntu docker，node报错ulimit,要更新版本，我使用的是aliyun的centos就没再折腾了
+ 
+在centos上搭建vpn
 
+ 
+多台公网服务器组建局域网
+  使用vpn
 
-</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/04/30/database_service/" title="云服务之数据库推荐">云服务之数据库推荐</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-04-30T08:07:59.583Z" title="Created 2023-04-30 08:07:59">2023-04-30</time></span></div><div class="content">云数据库MySQL
-planetscale
- 需要加密连接,直接使用网页端连接,选择branch目前还点不进去 只能自己修改url
+ 
+建立查找开放端口的对应IP服务
 
+ 
+暴力破解wifi密码
 
+ 
+mysql命令行登录的密码加密了吗
+  如果截获报文是可以看到客户端和服务器的机器类型的
 
-https://app.planetscale.com/jumhorn/daily/main/console
-
-
-SQLPub
- 免费500M空间
-
-Free MySQL Hosting
- 5M免费空间，支持phpMyAdmin
-
-
-postgreSQL
-ElephantSQL
- 20M免费空间
+ 
+搭建邮箱服务器
+  创建邮件列表相当于一个公用邮箱的转发和群发
 
 
-Redis
-Redis
- 30M免费空间
+</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/05/21/android_emulator_linux/" title="Linux上使用Android模拟器">Linux上使用Android模拟器</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-05-21T02:32:11.000Z" title="Created 2023-05-21 02:32:11">2023-05-21</time></span></div><div class="content">安装android模拟器在centos上安装anbox
 
 
-MongoDB
-MongoDB
- 512MB to 5GB of storage
+https://github.com/anbox/anbox
+
+工具
+snap1234567891011# install snapdnf install snapd# make snap use proxy to download fastersnap install snap-store-proxysnap install snap-store-proxy-client# start snapd serversystemctl enable --now snapd.socket# enable classic snap supportln -s /var/lib/snapd/snap /snap
+anbox1snap install anbox
+
+配置使用FAQ</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/05/21/android_use_sd_card_as_internal_storage/" title="Android上使用sdcard作为内置存储卡">Android上使用sdcard作为内置存储卡</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-05-21T02:32:11.000Z" title="Created 2023-05-21 02:32:11">2023-05-21</time></span></div><div class="content">android6.0 支持用sd卡作为内置存储由此想到了家里的小米电视4C，500M的可用存储空间只能看一下小米下载的广告，变空间不足了
+正好看到了android的新特性，便想拿小米电视做实验，没想到成功了，特别有成就感，所以想记录一下
+
+工具
+adb
+ adb是android-sdk下的工具，各个平台安装方法相似，以下推荐简单的安装方法
+ 建议安装commandline-tools才100M大小对比android-studio 900M，还是命令行充满了简洁性
 
 
-</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/04/30/debian_docker/" title="在dockerhub上创建debian docker，备份自己的主机">在dockerhub上创建debian docker，备份自己的主机</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-04-30T08:07:59.583Z" title="Created 2023-04-30 08:07:59">2023-04-30</time></span></div><div class="content">debian docker image使用了9年半的笔记本坏了，笔记本一直用的debian系统，现在又不想买笔记本，又离不开debian系统
-所以在此制作docker镜像并推送到dockerhub,来纪念我使用过的debian(bullseye)
+1234# debianapt install android-tools-adb # only 3M# macbrew install android-sdk
 
-software
-gnome&#x2F;xfce&#x2F;kde
-vncserver
-novnc
+开始实践打开电视开发者选项
+连续点击build number是android的通用方法 对于小米电视是连续点击产品型号，直到出现您已处于开发者模式即可
+允许adb调试 在账号与安全页面允许adb调试
 
-Dockerfile以下是ChatGPT的例子
+adb连接设备1234567# 连接到设备adb connect ip_of_device# adb在本地开启了一个服务，用完之后我会主动关闭它adb devic ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/05/21/archlinux_on_tencent_cloud/" title="腾讯云上安装archlinux">腾讯云上安装archlinux</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-05-21T02:32:11.000Z" title="Created 2023-05-21 02:32:11">2023-05-21</time></span></div><div class="content">腾讯云安装archlinux准备工作
+开放端口
+ 服务器&#x3D;&#x3D;&gt;防火墙 先删除默认规则，再添加规则开放所有端口
 
-1234567891011121314# 基础镜像FROM debian:bullseye-slim# 安装必要的软件包RUN apt-get update &amp;&amp; apt-get install -y \    x11vnc \    websockify \    novnc# 配置novnc服务的端口号EXPOSE 8080# 运行novnc服务CMD [&quot;websockify&quot;, &quot;--web=/usr/share/novnc/&quot;, &quot;8080&quot;, &quot;--&quot;, &quot;x11vnc&qu ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/04/30/download_video_audio_from_website/" title="如何下载网页上的视频">如何下载网页上的视频</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-04-30T08:07:59.583Z" title="Created 2023-04-30 08:07:59">2023-04-30</time></span></div><div class="content">用浏览器直接下载视频和音频学会这项技能的学习资料不是javascript，不是chrome debug
-而是http协议
-
-
-https://developer.mozilla.org/zh-CN/docs/Web/HTTP
-
-下载音频使用bing translator为例子
-https://cn.bing.com/translator
+确保可以vnc登录
+ vnc登录要设置密码
 
 
-F12打开浏览器调试界面，打开network标签页，并清空该标签页
-firefox直接类型选择media,chrome需要all
-输入文本，点击试听，浏览器会播放一段音频
-找到对应语音的post请求
-目前是v1那个请求，右键copy as cURL
-terminal中复制刚才的命令并加上–output tts.mp3
-完成下载即可
+下载镜像https://mirrors.ustc.edu.cn/archlinux/iso
+下载最新的archlinux镜像到云服务器
 
-浏览器直接播放该音频
-在刚下载好的音频目录，启动http服务器1python3 -m http.server
-浏览器console标签页12audio = new Audio(&quot;http://localhost:8000/tts.mp3&quot;);audio.play();
+1wget https://mirrors.ustc.edu.cn/archlinux/iso/2022.10.01/archlinux-2022.10.01-x86_64.iso
 
-下载视频目前可行的通用方法是 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/04/30/github_action/" title="如何用github action完成定时任务">如何用github action完成定时任务</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-04-30T08:07:59.583Z" title="Created 2023-04-30 08:07:59">2023-04-30</time></span></div><div class="content">github action使用github action所创建的虚拟机
+编辑grub编辑/boot/grub2/grub.cfg,添加如下内容(有些系统路径/boot/grub/grub.cfg)
+/dev/vda1 要用fdisk -l确定
 
-创建github action在项目上方Actions点击后，创建一个workflow即可
-本质上就是在项目中建立.github/workflow/*.yaml文件
+1234567891011set timeout=60menuentry &#x27;ArchISO&#x27; --class iso &#123;	insmod iso9660	set isofile=/archlinux-2022.10.01-x86_64.iso	loopback loop0 $isofile ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/05/21/bruteforce_wifi_password/" title="暴力破解WIFI密码">暴力破解WIFI密码</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-05-21T02:32:11.000Z" title="Created 2023-05-21 02:32:11">2023-05-21</time></span></div><div class="content">暴力破解wifi密码如果是我写代码肯定是一遍遍的尝试，使用不同的密钥去连接wif，但是aircrack-ng是先抓取包，然后用这些数据包测试密码集合，这样可以别人不知道的情况下破解wifi密码
 
-建立虚拟机shell</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/04/30/github_wiki/" title="如何写github wiki">如何写github wiki</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-04-30T08:07:59.583Z" title="Created 2023-04-30 08:07:59">2023-04-30</time></span></div><div class="content"></div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/04/30/hello-world/" title="Hello World">Hello World</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-04-30T08:07:59.583Z" title="Created 2023-04-30 08:07:59">2023-04-30</time></span></div><div class="content">Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick StartCreate a new post1$ hexo new &quot;My New Post&quot;
+工具1234# debianapt install aircrack-ng# macbrew install aircrack-ng
 
-More info: Writing
-Run server1$ hexo server
+开始破解</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/05/21/cgi/" title="简单的CGI尝试">简单的CGI尝试</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-05-21T02:32:11.000Z" title="Created 2023-05-21 02:32:11">2023-05-21</time></span></div><div class="content">CGI(common gateway interface)CGI是服务器的标准,也就是任意具有输入输出的编程语言都可以轻易编写CGI程序
 
-More info: Server
-Generate static files1$ hexo generate
+python http server通过python的http模块作为server
 
-More info: Generating
-Deploy to remote sites1$ hexo deploy
+12# 启动服务器python3 -m http.server --cgi
+以下细节要注意
+CGI脚本一定要放在cgi-bin目录下
+CGI脚本一定要有执行权限
 
-More info: Deployment
-</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/04/30/http_request/" title="如何使用不同方式发送http请求">如何使用不同方式发送http请求</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-04-30T08:07:59.583Z" title="Created 2023-04-30 08:07:59">2023-04-30</time></span></div><div class="content">http请求发送http请求,通过命令行或者代码方法
-&gt; https://curlconverter.com
+标准CGI脚本
+bash脚本CGI
+123456#!/bin/bashecho &quot;Content-type: text/html&quot;echo &quot;&quot; # 输出换行是http协议格式必须的2个换行echo &quot;&lt;html&gt;&lt;body&gt;Hello CGI&lt;/body&gt;&lt;/html&gt;&quot;
 
-cURL123curl -H &quot;Content-Type:text/html&quot; www.google.com # headcurl www.google.com?cmd=&quot;ls -al&quot; # getcurl --data &quot;param1=value1&amp;param2=value2&quot; www.google.com # post
+python脚本CGI
+1234#!/bin/pythonprint(&quot;Content-type: text/html&quot;)print()print(&quot;&lt;html&gt;&lt;body&g ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/05/21/change_root_passwd/" title="忘记root密码如何在grub界面修改">忘记root密码如何在grub界面修改</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-05-21T02:32:11.000Z" title="Created 2023-05-21 02:32:11">2023-05-21</time></span></div><div class="content">修改系统root密码此方法适用于忘记linux系统root密码时，进入到grub界面修改root密码
 
-javascript fetch123456789101112131415161718//headfetch(&#x27;http://www.google.com&#x27;, &#123;    headers: &#123;        &#x27;Content-Type&#x27;: &#x27;text/html&#x27;    &#125;&#125;);// getfetch(&#x27;http://www.google.com?cmd=ls -al&#x27 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/04/30/kali_repositories_on_debian/" title="如何在debian机器上使用kali源">如何在debian机器上使用kali源</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-04-30T08:07:59.583Z" title="Created 2023-04-30 08:07:59">2023-04-30</time></span></div><div class="content">在debian系统上添加kali源突然想要用到kali,但是不想安装.但是kali是基于debian的，想到区别应该不大，把源加上就行了
+进入grub界面
+选择当前操作系统，按下e键
 
-添加kali源编辑/etc/apt/sources.list
+找到linux开头的行
+1linux /boot/vmlinuz-linux root-UUID=d474f2-e6a2-4cc3-9899-aa98af13  rw  quiet
+ 在后面添加init&#x3D;&#x2F;bin&#x2F;bash后变成
+1linux /boot/vmlinuz-linux root-UUID=d474f2-e6a2-4cc3-9899-aa98af13  rw  quiet init=/bin/bash
+按下ctrl+x
+ 进入单用户模式
 
-12345# debiandeb http://mirrors.ustc.edu.cn/debian/ bullseye main non-free contribdeb-src http://mirrors.ustc.edu.cn/debian/ bullseye main non-free contrib# kalideb http://mirrors.ustc.edu.cn/kali/ kali-rolling main non-free contrib
+挂载文件系统
+1mount -n -o remount,rw /
 
-添加kali官方密钥1wget -q -O - https://archive.kali.org/archive-key.asc | apt-key add
+修改密码
+1passwd
 
-更新源1apt update
+启动到正常模式
+1exec /sbin/init
 
-奇葩想法
-在debian上安装pacman
+</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/05/21/cloudflare_zero_trust/" title="如何使用cloudflare zero trust">如何使用cloudflare zero trust</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-05-21T02:32:11.000Z" title="Created 2023-05-21 02:32:11">2023-05-21</time></span></div><div class="content">Cloudflare Zero Trust利用内网穿透,暴露本地服务到对应域名。
+相比于frp,不需要自备服务器,使用cloudflare免费服务即可
 
-</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span><a class="page-number" href="/page/2/#content-inner">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/#content-inner">4</a><a class="extend next" rel="next" href="/page/2/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/favicon.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">JumHorn</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">38</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">2</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/JumHorn"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/04/30/gitlab-remote-development/" title="gitlab创建远程开发环境，将gitlab作为前端">gitlab创建远程开发环境，将gitlab作为前端</a><time datetime="2023-04-30T13:51:28.000Z" title="Created 2023-04-30 13:51:28">2023-04-30</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/04/30/database_service/" title="云服务之数据库推荐">云服务之数据库推荐</a><time datetime="2023-04-30T08:07:59.583Z" title="Created 2023-04-30 08:07:59">2023-04-30</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/04/30/debian_docker/" title="在dockerhub上创建debian docker，备份自己的主机">在dockerhub上创建debian docker，备份自己的主机</a><time datetime="2023-04-30T08:07:59.583Z" title="Created 2023-04-30 08:07:59">2023-04-30</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/04/30/download_video_audio_from_website/" title="如何下载网页上的视频">如何下载网页上的视频</a><time datetime="2023-04-30T08:07:59.583Z" title="Created 2023-04-30 08:07:59">2023-04-30</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/04/30/github_action/" title="如何用github action完成定时任务">如何用github action完成定时任务</a><time datetime="2023-04-30T08:07:59.583Z" title="Created 2023-04-30 08:07:59">2023-04-30</time></div></div></div></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>Tags</span></div><div class="card-tag-cloud"><a href="/tags/%E6%8A%80%E6%9C%AF/" style="font-size: 1.5em; color: #99a9bf">技术</a> <a href="/tags/%E4%BF%A1%E6%81%AF/" style="font-size: 1.1em; color: #999">信息</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>Archives</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/04/"><span class="card-archive-list-date">April 2023</span><span class="card-archive-list-count">37</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/03/"><span class="card-archive-list-date">March 2023</span><span class="card-archive-list-count">1</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article :</div><div class="item-count">38</div></div><div class="webinfo-item"><div class="item-name">UV :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">PV :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Last Push :</div><div class="item-count" id="last-push-date" data-lastPushDate="2023-04-30T08:08:12.548Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By JumHorn</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
+安装
+repo安装
+1apt install cloudflare
+
+package安装
+
+
+
+https://github.com/cloudflare/cloudflared/releases
+
+去官网下载对应版本
+
+1dpkg -i cloudflared.deb
+
+token官网dashboard页面，点击Zero Trust
+Access页面下的Tunnels
+就可以看到自己的token
+
+1sudo cloudflared service install your_token
+一个主机帐户token只需要安装一个token,一个token可以创建多个tunnel为多个端口提供服务
+一个cloudflare帐户只有一个token
+
+tunnel每个主机安装好token后,可以自己创建多个tunnel,这些tunnel就是为要暴露的端口提供服务的
+
+点击create tunnel ==&gt; public hostname
+ ...</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span><a class="page-number" href="/page/2/#content-inner">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/#content-inner">4</a><a class="extend next" rel="next" href="/page/2/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/favicon.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">JumHorn</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">38</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">2</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/JumHorn"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/05/21/DDOS/" title="一条命令实现DDOS">一条命令实现DDOS</a><time datetime="2023-05-21T02:32:11.000Z" title="Created 2023-05-21 02:32:11">2023-05-21</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/05/21/README/" title="仅为乐趣而写博客">仅为乐趣而写博客</a><time datetime="2023-05-21T02:32:11.000Z" title="Created 2023-05-21 02:32:11">2023-05-21</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/05/21/android_emulator_linux/" title="Linux上使用Android模拟器">Linux上使用Android模拟器</a><time datetime="2023-05-21T02:32:11.000Z" title="Created 2023-05-21 02:32:11">2023-05-21</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/05/21/android_use_sd_card_as_internal_storage/" title="Android上使用sdcard作为内置存储卡">Android上使用sdcard作为内置存储卡</a><time datetime="2023-05-21T02:32:11.000Z" title="Created 2023-05-21 02:32:11">2023-05-21</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/05/21/archlinux_on_tencent_cloud/" title="腾讯云上安装archlinux">腾讯云上安装archlinux</a><time datetime="2023-05-21T02:32:11.000Z" title="Created 2023-05-21 02:32:11">2023-05-21</time></div></div></div></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>Tags</span></div><div class="card-tag-cloud"><a href="/tags/%E6%8A%80%E6%9C%AF/" style="font-size: 1.5em; color: #99a9bf">技术</a> <a href="/tags/%E4%BF%A1%E6%81%AF/" style="font-size: 1.1em; color: #999">信息</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>Archives</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/05/"><span class="card-archive-list-date">May 2023</span><span class="card-archive-list-count">35</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/04/"><span class="card-archive-list-date">April 2023</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/03/"><span class="card-archive-list-date">March 2023</span><span class="card-archive-list-count">1</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article :</div><div class="item-count">38</div></div><div class="webinfo-item"><div class="item-name">UV :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">PV :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Last Push :</div><div class="item-count" id="last-push-date" data-lastPushDate="2023-05-21T02:32:22.648Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By JumHorn</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
