@@ -22,17 +22,31 @@ pip install certbot
 
 ## http验证
 
+1. 验证
+
 	http验证比较简单,按照提示步骤即可
 ```shell
 sudo certbot --nginx
 ```
 
+2. 更新
+```shell
+sudo certbot renew
+```
+
 ## DNS验证
 
+1. 验证
 	DNS验证多了一步，要到DNS服务上添加一条text记录
 ```shell
 certbot --text --agree-tos --email <your@email.com> -d <your.domain.com> --manual --preferred-challenges dns --expand --renew-by-default  --manual-public-ip-logging-ok certonly
 ```
+
+2. 更新
+```shell
+certbot --manual --preferred-challenges dns certonly
+```
+
 ## 服务器(nginx)
 
 	其中fullchain.pem,privkey.pem都是上述验证命令给出的位置
@@ -56,6 +70,7 @@ server {
 		proxy_read_timeout 300;
 		proxy_set_header Upgrade $http_upgrade;
 		proxy_set_header Connection "upgrade";
+		proxy_set_header X-Forwarded-Proto $scheme;//http or https
 		proxy_set_header Host $http_host;
 		proxy_set_header X-Real-IP $remote_addr;
 		proxy_set_header X-Real-PORT $remote_port;
