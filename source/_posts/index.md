@@ -50,6 +50,14 @@ sticky: true
 
     14703386881
 
+## 微信ID
+
+    wxid_lfvumigsxwgz22
+
 ## USDT(TRC20)
 
     TLRyqMj1Z5yrzY7SkXk3jbPLG3Lb5mdQK8
+
+## USDT(BEP20)
+
+    0x7e6f4f0e7dd6fe4619e005ea5299652e3f72b892
