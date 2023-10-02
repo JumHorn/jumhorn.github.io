@@ -2,9 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://jumhorn.com:8880/2023/09/15/README/</loc>
+    <loc>https://jumhorn.com:8880/2023/10/02/DDOS/</loc>
     
-    <lastmod>2023-09-15</lastmod>
+    <lastmod>2023-10-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://jumhorn.com:8880/2023/10/02/README/</loc>
+    
+    <lastmod>2023-10-02</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -13,70 +22,61 @@
   <url>
     <loc>https://jumhorn.com:8880/2023/04/21/about/</loc>
     
-    <lastmod>2023-09-15</lastmod>
+    <lastmod>2023-10-02</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://jumhorn.com:8880/2023/09/15/DDOS/</loc>
+    <loc>https://jumhorn.com:8880/2023/10/02/android_emulator_linux/</loc>
     
-    <lastmod>2023-09-15</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://jumhorn.com:8880/2023/09/15/android_emulator_linux/</loc>
-    
-    <lastmod>2023-09-15</lastmod>
+    <lastmod>2023-10-02</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://jumhorn.com:8880/2023/09/15/android_use_sd_card_as_internal_storage/</loc>
+    <loc>https://jumhorn.com:8880/2023/10/02/android_use_sd_card_as_internal_storage/</loc>
     
-    <lastmod>2023-09-15</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://jumhorn.com:8880/2023/09/15/archlinux_on_tencent_cloud/</loc>
-    
-    <lastmod>2023-09-15</lastmod>
+    <lastmod>2023-10-02</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://jumhorn.com:8880/2023/09/15/bruteforce_wifi_password/</loc>
+    <loc>https://jumhorn.com:8880/2023/10/02/archlinux_on_tencent_cloud/</loc>
     
-    <lastmod>2023-09-15</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://jumhorn.com:8880/2023/09/15/cgi/</loc>
-    
-    <lastmod>2023-09-15</lastmod>
+    <lastmod>2023-10-02</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://jumhorn.com:8880/2023/09/15/change_root_passwd/</loc>
+    <loc>https://jumhorn.com:8880/2023/10/02/bruteforce_wifi_password/</loc>
     
-    <lastmod>2023-09-15</lastmod>
+    <lastmod>2023-10-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://jumhorn.com:8880/2023/10/02/cgi/</loc>
+    
+    <lastmod>2023-10-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://jumhorn.com:8880/2023/10/02/change_root_passwd/</loc>
+    
+    <lastmod>2023-10-02</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -85,70 +85,70 @@
   <url>
     <loc>https://jumhorn.com:8880/2023/09/15/chrome_wechat_debug/</loc>
     
-    <lastmod>2023-09-15</lastmod>
+    <lastmod>2023-10-02</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://jumhorn.com:8880/2023/09/15/cloudflare_zero_trust/</loc>
+    <loc>https://jumhorn.com:8880/2023/10/02/cloudflare_zero_trust/</loc>
     
-    <lastmod>2023-09-15</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://jumhorn.com:8880/2023/09/15/create_mail_server/</loc>
-    
-    <lastmod>2023-09-15</lastmod>
+    <lastmod>2023-10-02</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://jumhorn.com:8880/2023/09/15/database_service/</loc>
+    <loc>https://jumhorn.com:8880/2023/10/02/create_mail_server/</loc>
     
-    <lastmod>2023-09-15</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://jumhorn.com:8880/2023/09/15/debian_docker/</loc>
-    
-    <lastmod>2023-09-15</lastmod>
+    <lastmod>2023-10-02</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://jumhorn.com:8880/2023/09/15/download_video_audio_from_website/</loc>
+    <loc>https://jumhorn.com:8880/2023/10/02/database_service/</loc>
     
-    <lastmod>2023-09-15</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://jumhorn.com:8880/2023/09/15/github_action/</loc>
-    
-    <lastmod>2023-09-15</lastmod>
+    <lastmod>2023-10-02</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://jumhorn.com:8880/2023/09/15/github_wiki/</loc>
+    <loc>https://jumhorn.com:8880/2023/10/02/debian_docker/</loc>
     
-    <lastmod>2023-09-15</lastmod>
+    <lastmod>2023-10-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://jumhorn.com:8880/2023/10/02/download_video_audio_from_website/</loc>
+    
+    <lastmod>2023-10-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://jumhorn.com:8880/2023/10/02/github_action/</loc>
+    
+    <lastmod>2023-10-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://jumhorn.com:8880/2023/10/02/github_wiki/</loc>
+    
+    <lastmod>2023-10-02</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -157,25 +157,25 @@
   <url>
     <loc>https://jumhorn.com:8880/2023/04/30/gitlab-remote-development/</loc>
     
-    <lastmod>2023-09-15</lastmod>
+    <lastmod>2023-10-02</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://jumhorn.com:8880/2023/09/15/hello-world/</loc>
+    <loc>https://jumhorn.com:8880/2023/10/02/hello-world/</loc>
     
-    <lastmod>2023-09-15</lastmod>
+    <lastmod>2023-10-02</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://jumhorn.com:8880/2023/09/15/http_request/</loc>
+    <loc>https://jumhorn.com:8880/2023/10/02/http_request/</loc>
     
-    <lastmod>2023-09-15</lastmod>
+    <lastmod>2023-10-02</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -184,61 +184,61 @@
   <url>
     <loc>https://jumhorn.com:8880/2023/03/22/index/</loc>
     
-    <lastmod>2023-09-15</lastmod>
+    <lastmod>2023-10-02</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://jumhorn.com:8880/2023/09/15/kali_repositories_on_debian/</loc>
+    <loc>https://jumhorn.com:8880/2023/10/02/kali_repositories_on_debian/</loc>
     
-    <lastmod>2023-09-15</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://jumhorn.com:8880/2023/09/15/kms/</loc>
-    
-    <lastmod>2023-09-15</lastmod>
+    <lastmod>2023-10-02</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://jumhorn.com:8880/2023/09/15/letsencrypt/</loc>
+    <loc>https://jumhorn.com:8880/2023/10/02/kms/</loc>
     
-    <lastmod>2023-09-15</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://jumhorn.com:8880/2023/09/15/lightweight_linux_desktop_environment/</loc>
-    
-    <lastmod>2023-09-15</lastmod>
+    <lastmod>2023-10-02</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://jumhorn.com:8880/2023/09/15/linux_everywhere/</loc>
+    <loc>https://jumhorn.com:8880/2023/10/02/letsencrypt/</loc>
     
-    <lastmod>2023-09-15</lastmod>
+    <lastmod>2023-10-02</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://jumhorn.com:8880/2023/09/15/metasploit/</loc>
+    <loc>https://jumhorn.com:8880/2023/10/02/lightweight_linux_desktop_environment/</loc>
     
-    <lastmod>2023-09-15</lastmod>
+    <lastmod>2023-10-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://jumhorn.com:8880/2023/10/02/linux_everywhere/</loc>
+    
+    <lastmod>2023-10-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://jumhorn.com:8880/2023/10/02/metasploit/</loc>
+    
+    <lastmod>2023-10-02</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -247,115 +247,115 @@
   <url>
     <loc>https://jumhorn.com:8880/2023/05/23/nginx-redirect/</loc>
     
-    <lastmod>2023-09-15</lastmod>
+    <lastmod>2023-10-02</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://jumhorn.com:8880/2023/09/15/p2p/</loc>
+    <loc>https://jumhorn.com:8880/2023/10/02/p2p/</loc>
     
-    <lastmod>2023-09-15</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://jumhorn.com:8880/2023/09/15/seo/</loc>
-    
-    <lastmod>2023-09-15</lastmod>
+    <lastmod>2023-10-02</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://jumhorn.com:8880/2023/09/15/set_proxy/</loc>
+    <loc>https://jumhorn.com:8880/2023/10/02/seo/</loc>
     
-    <lastmod>2023-09-15</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://jumhorn.com:8880/2023/09/15/ssh_bruteforce_login/</loc>
-    
-    <lastmod>2023-09-15</lastmod>
+    <lastmod>2023-10-02</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://jumhorn.com:8880/2023/09/15/ubuntu_mail_server/</loc>
+    <loc>https://jumhorn.com:8880/2023/10/02/set_proxy/</loc>
     
-    <lastmod>2023-09-15</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://jumhorn.com:8880/2023/09/15/v2ray_reverse_proxy/</loc>
-    
-    <lastmod>2023-09-15</lastmod>
+    <lastmod>2023-10-02</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://jumhorn.com:8880/2023/09/15/vnc/</loc>
+    <loc>https://jumhorn.com:8880/2023/10/02/ssh_bruteforce_login/</loc>
     
-    <lastmod>2023-09-15</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://jumhorn.com:8880/2023/09/15/vpn/</loc>
-    
-    <lastmod>2023-09-15</lastmod>
+    <lastmod>2023-10-02</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://jumhorn.com:8880/2023/09/15/webapp/</loc>
+    <loc>https://jumhorn.com:8880/2023/10/02/ubuntu_mail_server/</loc>
     
-    <lastmod>2023-09-15</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://jumhorn.com:8880/2023/09/15/webhosting/</loc>
-    
-    <lastmod>2023-09-15</lastmod>
+    <lastmod>2023-10-02</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://jumhorn.com:8880/2023/09/15/webshells_php/</loc>
+    <loc>https://jumhorn.com:8880/2023/10/02/v2ray_reverse_proxy/</loc>
     
-    <lastmod>2023-09-15</lastmod>
+    <lastmod>2023-10-02</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://jumhorn.com:8880/2023/09/15/webssh/</loc>
+    <loc>https://jumhorn.com:8880/2023/10/02/vnc/</loc>
     
-    <lastmod>2023-09-15</lastmod>
+    <lastmod>2023-10-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://jumhorn.com:8880/2023/10/02/vpn/</loc>
+    
+    <lastmod>2023-10-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://jumhorn.com:8880/2023/10/02/webapp/</loc>
+    
+    <lastmod>2023-10-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://jumhorn.com:8880/2023/10/02/webhosting/</loc>
+    
+    <lastmod>2023-10-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://jumhorn.com:8880/2023/10/02/webshells_php/</loc>
+    
+    <lastmod>2023-10-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://jumhorn.com:8880/2023/10/02/webssh/</loc>
+    
+    <lastmod>2023-10-02</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -364,7 +364,7 @@
   <url>
     <loc>https://jumhorn.com:8880/tags/index.html</loc>
     
-    <lastmod>2023-09-15</lastmod>
+    <lastmod>2023-10-02</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -373,7 +373,7 @@
 
   <url>
     <loc>https://jumhorn.com:8880/</loc>
-    <lastmod>2023-09-15</lastmod>
+    <lastmod>2023-10-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -381,14 +381,14 @@
   
   <url>
     <loc>https://jumhorn.com:8880/tags/%E6%8A%80%E6%9C%AF/</loc>
-    <lastmod>2023-09-15</lastmod>
+    <lastmod>2023-10-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://jumhorn.com:8880/tags/%E4%BF%A1%E6%81%AF/</loc>
-    <lastmod>2023-09-15</lastmod>
+    <lastmod>2023-10-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
