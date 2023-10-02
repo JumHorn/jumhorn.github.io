@@ -72,14 +72,17 @@ server {
     nginx自动跳转加上了内部配置的端口号,
     即便添修改成如下配置自动跳转到/vscode/，nginx依然会加上内部端口号，导致访问出错
     所以只能将全部域名添加上改成 return 302 http://$host/vscode/;
+
+    之前问题分析都十分正确，解决方法不算优雅，但是解决了问题，当时虽然有困扰，但是不敢耽误时间。
+    过了大半年后，这个问题有了更为优雅的解决方法，只需要加上
+    port_in_redirect off;即可
+    调试的时候也要非常小心，因为浏览器有缓存，会导致加上之后没有实际效果，所以要清空缓存再试
+
 ```conf
 server {
     listen       127.0.0.1:8880 ssl;
     server_name  jumhorn.com www.jumhorn.com;
-
-    location /vscode {
-        return 302 /vscode/;
-    }
+    port_in_redirect off;
 
     location /vscode/ {
         proxy_pass  http://127.0.0.1:8080/;
@@ -137,3 +140,9 @@ stream {
 	}
 }
 ```
+
+# FAQ
+
+1. port_in_redirect off;添加之后没有效果
+
+    调试的时候也要非常小心，因为浏览器有缓存，会导致加上之后没有实际效果，所以要清空缓存再试
