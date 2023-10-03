@@ -7,6 +7,7 @@ tags: 技术
 
 	用最简单的方式创建邮件服务器
 	以centos8为例子
+## [postfix is a better choice](ubuntu_mail_server.md)
 
 ## 修改域名服务器记录值
 1. 登录至域名管理界面
