@@ -2,90 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://blog.jumhorn.com/tags/index.html</loc>
+    <loc>https://blog.jumhorn.com/2023/10/10/change_root_passwd/</loc>
     
-    <lastmod>2023-10-08</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.jumhorn.com/2023/10/08/DDOS/</loc>
-    
-    <lastmod>2023-10-08</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.jumhorn.com/2023/10/08/README/</loc>
-    
-    <lastmod>2023-10-08</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.jumhorn.com/2023/04/21/about/</loc>
-    
-    <lastmod>2023-10-08</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.jumhorn.com/2023/10/08/android_emulator_linux/</loc>
-    
-    <lastmod>2023-10-08</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.jumhorn.com/2023/10/08/android_use_sd_card_as_internal_storage/</loc>
-    
-    <lastmod>2023-10-08</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.jumhorn.com/2023/10/08/archlinux_on_tencent_cloud/</loc>
-    
-    <lastmod>2023-10-08</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.jumhorn.com/2023/10/08/bruteforce_wifi_password/</loc>
-    
-    <lastmod>2023-10-08</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.jumhorn.com/2023/10/08/cgi/</loc>
-    
-    <lastmod>2023-10-08</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.jumhorn.com/2023/10/08/change_root_passwd/</loc>
-    
-    <lastmod>2023-10-08</lastmod>
+    <lastmod>2023-10-10</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -94,70 +13,70 @@
   <url>
     <loc>https://blog.jumhorn.com/2023/09/15/chrome_wechat_debug/</loc>
     
-    <lastmod>2023-10-08</lastmod>
+    <lastmod>2023-10-10</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://blog.jumhorn.com/2023/10/08/cloudflare_zero_trust/</loc>
+    <loc>https://blog.jumhorn.com/2023/10/10/cloudflare_zero_trust/</loc>
     
-    <lastmod>2023-10-08</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.jumhorn.com/2023/10/08/create_mail_server/</loc>
-    
-    <lastmod>2023-10-08</lastmod>
+    <lastmod>2023-10-10</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://blog.jumhorn.com/2023/10/08/database_service/</loc>
+    <loc>https://blog.jumhorn.com/2023/10/10/create_mail_server/</loc>
     
-    <lastmod>2023-10-08</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.jumhorn.com/2023/10/08/debian_docker/</loc>
-    
-    <lastmod>2023-10-08</lastmod>
+    <lastmod>2023-10-10</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://blog.jumhorn.com/2023/10/08/download_video_audio_from_website/</loc>
+    <loc>https://blog.jumhorn.com/2023/10/10/database_service/</loc>
     
-    <lastmod>2023-10-08</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.jumhorn.com/2023/10/08/github_action/</loc>
-    
-    <lastmod>2023-10-08</lastmod>
+    <lastmod>2023-10-10</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://blog.jumhorn.com/2023/10/08/github_wiki/</loc>
+    <loc>https://blog.jumhorn.com/2023/10/10/debian_docker/</loc>
     
-    <lastmod>2023-10-08</lastmod>
+    <lastmod>2023-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.jumhorn.com/2023/10/10/download_video_audio_from_website/</loc>
+    
+    <lastmod>2023-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.jumhorn.com/2023/10/10/github_action/</loc>
+    
+    <lastmod>2023-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.jumhorn.com/2023/10/10/github_wiki/</loc>
+    
+    <lastmod>2023-10-10</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -166,25 +85,25 @@
   <url>
     <loc>https://blog.jumhorn.com/2023/04/30/gitlab-remote-development/</loc>
     
-    <lastmod>2023-10-08</lastmod>
+    <lastmod>2023-10-10</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://blog.jumhorn.com/2023/10/08/hello-world/</loc>
+    <loc>https://blog.jumhorn.com/2023/10/10/hello-world/</loc>
     
-    <lastmod>2023-10-08</lastmod>
+    <lastmod>2023-10-10</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://blog.jumhorn.com/2023/10/08/http_request/</loc>
+    <loc>https://blog.jumhorn.com/2023/10/10/http_request/</loc>
     
-    <lastmod>2023-10-08</lastmod>
+    <lastmod>2023-10-10</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -193,61 +112,61 @@
   <url>
     <loc>https://blog.jumhorn.com/2023/03/22/index/</loc>
     
-    <lastmod>2023-10-08</lastmod>
+    <lastmod>2023-10-10</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://blog.jumhorn.com/2023/10/08/kali_repositories_on_debian/</loc>
+    <loc>https://blog.jumhorn.com/2023/10/10/kali_repositories_on_debian/</loc>
     
-    <lastmod>2023-10-08</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.jumhorn.com/2023/10/08/kms/</loc>
-    
-    <lastmod>2023-10-08</lastmod>
+    <lastmod>2023-10-10</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://blog.jumhorn.com/2023/10/08/letsencrypt/</loc>
+    <loc>https://blog.jumhorn.com/2023/10/10/kms/</loc>
     
-    <lastmod>2023-10-08</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.jumhorn.com/2023/10/08/lightweight_linux_desktop_environment/</loc>
-    
-    <lastmod>2023-10-08</lastmod>
+    <lastmod>2023-10-10</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://blog.jumhorn.com/2023/10/08/linux_everywhere/</loc>
+    <loc>https://blog.jumhorn.com/2023/10/10/letsencrypt/</loc>
     
-    <lastmod>2023-10-08</lastmod>
+    <lastmod>2023-10-10</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://blog.jumhorn.com/2023/10/08/metasploit/</loc>
+    <loc>https://blog.jumhorn.com/2023/10/10/lightweight_linux_desktop_environment/</loc>
     
-    <lastmod>2023-10-08</lastmod>
+    <lastmod>2023-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.jumhorn.com/2023/10/10/linux_everywhere/</loc>
+    
+    <lastmod>2023-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.jumhorn.com/2023/10/10/metasploit/</loc>
+    
+    <lastmod>2023-10-10</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -256,43 +175,43 @@
   <url>
     <loc>https://blog.jumhorn.com/2023/05/23/nginx-redirect/</loc>
     
-    <lastmod>2023-10-08</lastmod>
+    <lastmod>2023-10-10</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://blog.jumhorn.com/2023/10/08/p2p/</loc>
+    <loc>https://blog.jumhorn.com/2023/10/10/p2p/</loc>
     
-    <lastmod>2023-10-08</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.jumhorn.com/2023/10/08/seo/</loc>
-    
-    <lastmod>2023-10-08</lastmod>
+    <lastmod>2023-10-10</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://blog.jumhorn.com/2023/10/08/set_proxy/</loc>
+    <loc>https://blog.jumhorn.com/2023/10/10/seo/</loc>
     
-    <lastmod>2023-10-08</lastmod>
+    <lastmod>2023-10-10</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://blog.jumhorn.com/2023/10/08/ssh_bruteforce_login/</loc>
+    <loc>https://blog.jumhorn.com/2023/10/10/set_proxy/</loc>
     
-    <lastmod>2023-10-08</lastmod>
+    <lastmod>2023-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.jumhorn.com/2023/10/10/ssh_bruteforce_login/</loc>
+    
+    <lastmod>2023-10-10</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -301,79 +220,160 @@
   <url>
     <loc>https://blog.jumhorn.com/2023/10/05/strace_debug/</loc>
     
-    <lastmod>2023-10-08</lastmod>
+    <lastmod>2023-10-10</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://blog.jumhorn.com/2023/10/08/ubuntu_mail_server/</loc>
+    <loc>https://blog.jumhorn.com/2023/10/10/ubuntu_mail_server/</loc>
     
-    <lastmod>2023-10-08</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.jumhorn.com/2023/10/08/v2ray_reverse_proxy/</loc>
-    
-    <lastmod>2023-10-08</lastmod>
+    <lastmod>2023-10-10</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://blog.jumhorn.com/2023/10/08/vnc/</loc>
+    <loc>https://blog.jumhorn.com/2023/10/10/v2ray_reverse_proxy/</loc>
     
-    <lastmod>2023-10-08</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.jumhorn.com/2023/10/08/vpn/</loc>
-    
-    <lastmod>2023-10-08</lastmod>
+    <lastmod>2023-10-10</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://blog.jumhorn.com/2023/10/08/webapp/</loc>
+    <loc>https://blog.jumhorn.com/2023/10/10/vnc/</loc>
     
-    <lastmod>2023-10-08</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.jumhorn.com/2023/10/08/webhosting/</loc>
-    
-    <lastmod>2023-10-08</lastmod>
+    <lastmod>2023-10-10</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://blog.jumhorn.com/2023/10/08/webshells_php/</loc>
+    <loc>https://blog.jumhorn.com/2023/10/10/vpn/</loc>
     
-    <lastmod>2023-10-08</lastmod>
+    <lastmod>2023-10-10</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://blog.jumhorn.com/2023/10/08/webssh/</loc>
+    <loc>https://blog.jumhorn.com/2023/10/10/webapp/</loc>
     
-    <lastmod>2023-10-08</lastmod>
+    <lastmod>2023-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.jumhorn.com/2023/10/10/webhosting/</loc>
+    
+    <lastmod>2023-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.jumhorn.com/2023/10/10/webshells_php/</loc>
+    
+    <lastmod>2023-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.jumhorn.com/2023/10/10/webssh/</loc>
+    
+    <lastmod>2023-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.jumhorn.com/tags/index.html</loc>
+    
+    <lastmod>2023-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.jumhorn.com/2023/10/10/DDOS/</loc>
+    
+    <lastmod>2023-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.jumhorn.com/2023/10/10/README/</loc>
+    
+    <lastmod>2023-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.jumhorn.com/2023/04/21/about/</loc>
+    
+    <lastmod>2023-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.jumhorn.com/2023/10/10/android_emulator_linux/</loc>
+    
+    <lastmod>2023-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.jumhorn.com/2023/10/10/android_use_sd_card_as_internal_storage/</loc>
+    
+    <lastmod>2023-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.jumhorn.com/2023/10/10/archlinux_on_tencent_cloud/</loc>
+    
+    <lastmod>2023-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.jumhorn.com/2023/10/10/bruteforce_wifi_password/</loc>
+    
+    <lastmod>2023-10-10</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.jumhorn.com/2023/10/10/cgi/</loc>
+    
+    <lastmod>2023-10-10</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -382,7 +382,7 @@
 
   <url>
     <loc>https://blog.jumhorn.com/</loc>
-    <lastmod>2023-10-08</lastmod>
+    <lastmod>2023-10-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -390,14 +390,14 @@
   
   <url>
     <loc>https://blog.jumhorn.com/tags/%E6%8A%80%E6%9C%AF/</loc>
-    <lastmod>2023-10-08</lastmod>
+    <lastmod>2023-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://blog.jumhorn.com/tags/%E4%BF%A1%E6%81%AF/</loc>
-    <lastmod>2023-10-08</lastmod>
+    <lastmod>2023-10-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
