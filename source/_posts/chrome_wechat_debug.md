@@ -35,3 +35,9 @@ chrome://inspect/#devices
 
     电脑上出现微信正在访问的页面，点击inspect即可。
     此时可以在电脑上注入JavaScript代码，修改页面功能。
+
+## FAQ
+
+1. 无法显示网页，出现黑屏
+
+    该方法要求一定要能访问google页面，需要科学上网
