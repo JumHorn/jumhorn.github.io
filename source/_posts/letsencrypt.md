@@ -17,7 +17,7 @@ tags: 技术
 
 ## 安装
 ```shell
-pip install certbot
+apt install certbot
 ```
 
 ## http验证
