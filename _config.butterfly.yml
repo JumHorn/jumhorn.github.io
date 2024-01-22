@@ -234,7 +234,7 @@ aside:
       link: https://github.com/JumHorn
   card_announcement:
     enable: true
-    content: Blog Space
+    content: BlogSpace
   card_recent_post:
     enable: true
     limit: 5 # if set 0 will show all
