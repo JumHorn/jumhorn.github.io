@@ -234,7 +234,7 @@ aside:
       link: https://github.com/JumHorn
   card_announcement:
     enable: true
-    content: This is my Blog
+    content: Blog Space
   card_recent_post:
     enable: true
     limit: 5 # if set 0 will show all
@@ -478,7 +478,7 @@ facebook_comments:
   user_id: # optional
   pageSize: 10 # The number of comments to show
   order_by: social # social/time/reverse_time
-  lang: zh_TW # Language en_US/zh_CN/zh_TW and so on
+  lang: en_US # Language en_US/zh_CN/zh_TW and so on
 
 # Twikoo
 # https://github.com/imaegoo/twikoo
@@ -553,7 +553,7 @@ crisp:
 messenger:
   enable: false
   pageID:
-  lang: zh_TW # Language en_US/zh_CN/zh_TW and so on
+  lang: en_US # Language en_US/zh_CN/zh_TW and so on
 
 # Analysis
 # --------------------------------------
