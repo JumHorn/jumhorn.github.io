@@ -63,4 +63,17 @@ curl ip:port/cgi-bin/echo
 
 ## nginx server
 
-    尚未验证,需要fcgiwrap,因为nginx支持fastCGI
+    需要fcgiwrap,因为nginx支持fastCGI
+```conf
+server {
+    location / {
+        # Fastcgi socket
+        fastcgi_pass  unix:/var/run/fcgiwrap.socket;
+        # Fastcgi parameters, include the standard ones
+        include fastcgi_params;
+        root /home/admin/www;
+        # change environment variable
+        fastcgi_param SCRIPT_FILENAME  $document_root$fastcgi_script_name;
+    }
+}
+```
