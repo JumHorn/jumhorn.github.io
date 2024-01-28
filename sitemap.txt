@@ -25,7 +25,7 @@ https://blog.jumhorn.com/2024/01/28/letsencrypt/
 https://blog.jumhorn.com/2024/01/28/lightweight_linux_desktop_environment/
 https://blog.jumhorn.com/2024/01/28/linux_everywhere/
 https://blog.jumhorn.com/2024/01/28/metasploit/
-https://blog.jumhorn.com/2023/01/28/nginx-proxy-protocol/
+https://blog.jumhorn.com/2024/01/28/nginx-proxy-protocol/
 https://blog.jumhorn.com/2023/05/23/nginx-redirect/
 https://blog.jumhorn.com/2024/01/28/p2p/
 https://blog.jumhorn.com/2024/01/28/seo/
@@ -38,8 +38,8 @@ https://blog.jumhorn.com/2024/01/28/vnc/
 https://blog.jumhorn.com/2024/01/28/vpn/
 https://blog.jumhorn.com/2024/01/28/webapp/
 https://blog.jumhorn.com/2024/01/28/webhosting/
-https://blog.jumhorn.com/2024/01/28/webssh/
 https://blog.jumhorn.com/2024/01/28/webshells_php/
+https://blog.jumhorn.com/2024/01/28/webssh/
 https://blog.jumhorn.com/tags/index.html
 https://blog.jumhorn.com/
 https://blog.jumhorn.com/tags/%E6%8A%80%E6%9C%AF/
