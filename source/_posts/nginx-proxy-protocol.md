@@ -32,8 +32,8 @@ server {
     listen 127.0.0.1:80 ssl proxy_protocol;
     server_name jumhorn.com;
 
-	proxy_set_header X-Real-IP $proxy_protocol_addr;
-	proxy_set_header X-Real-PORT $proxy_protocol_port;
+    proxy_set_header X-Real-IP $proxy_protocol_addr;
+    proxy_set_header X-Real-PORT $proxy_protocol_port;
     location / {
         proxy_pass http_server;
     }
@@ -71,8 +71,8 @@ server {
     listen 127.0.0.1:80 ssl proxy_protocol;
     server_name jumhorn.com;
 
-	proxy_set_header X-Real-IP $proxy_protocol_addr;
-	proxy_set_header X-Real-PORT $proxy_protocol_port;
+    proxy_set_header X-Real-IP $proxy_protocol_addr;
+    proxy_set_header X-Real-PORT $proxy_protocol_port;
     location / {
         proxy_pass http_server;
     }
