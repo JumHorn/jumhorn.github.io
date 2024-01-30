@@ -34,7 +34,8 @@ tags: 信息
 	旧技术一般是静态建站，使用了PHP相关技术较多
 	当然使用php技术的站点，都可以尝试取系统权限
 [//]: # "参考[phpshell](webshells_php.md)"
-	参考{% post_link webshells_php "phpshell" %}
+	参考:
+	{% post_link webshells_php "phpshell" %}
 
 ## [wordpress](https://wordpress.com)
 
