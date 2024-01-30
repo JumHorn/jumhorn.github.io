@@ -23,8 +23,8 @@ https://blog.jumhorn.com/index/
 https://blog.jumhorn.com/kali_repositories_on_debian/
 https://blog.jumhorn.com/kms/
 https://blog.jumhorn.com/letsencrypt/
-https://blog.jumhorn.com/lightweight_linux_desktop_environment/
 https://blog.jumhorn.com/linux_everywhere/
+https://blog.jumhorn.com/lightweight_linux_desktop_environment/
 https://blog.jumhorn.com/metasploit/
 https://blog.jumhorn.com/nginx-proxy-protocol/
 https://blog.jumhorn.com/nginx-redirect/
