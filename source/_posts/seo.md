@@ -22,3 +22,5 @@ tags: 技术
 
 
 ## Bing Webmaster
+
+# 简单常用SEO方法

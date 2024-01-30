@@ -39,7 +39,8 @@ tags: 信息
 
 	有8G内存,32G空间,写代码专用,30分钟无活动自动关闭
 
-## [github actions](github_action.md)
+[//]: # "## [github actions](github_action.md)"
+## {% post_link github_action "github actions" %}
 
 	可以创建定时任务
 
@@ -88,7 +89,8 @@ tags: 信息
 
 ## php建站系统漏洞获取
 
-[phpshell](webshells_php.md)
+[//]: # "[phpshell](webshells_php.md)"
+{% post_link webshells_php "phpshell" %}
 
 ## nodejs，python建站系统漏洞获取
 
@@ -96,7 +98,8 @@ tags: 信息
 
 ## 可以测试的网站
 
-[web hosting](webhosting.md)
+[//]: # "[web hosting](webhosting.md)"
+{% post_link webhosting "web hosting" %}
 
 # others
 

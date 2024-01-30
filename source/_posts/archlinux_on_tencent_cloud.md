@@ -107,7 +107,8 @@ systemctl enable sshd
 # FAQ
 1. 没有设置root密码
 
-	[change root passwd](change_root_passwd.md)
+	[//]: # "[change root passwd](change_root_passwd.md)"
+	{% post_link change_root_passwd "change root passwd" %}
 
 2. ping不通arch服务器
 
