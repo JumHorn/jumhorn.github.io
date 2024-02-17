@@ -1,5 +1,6 @@
 ---
 title: Ubuntu上使用postfix搭建邮件服务器
+date: 2022-02-15 00:00:00
 tags: 技术
 ---
 

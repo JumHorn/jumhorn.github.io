@@ -1,5 +1,6 @@
 ---
 title: PHP webshell 漏洞
+date: 2022-02-15 00:00:00
 tags: 技术
 ---
 
@@ -111,5 +112,5 @@ http://ip:port/webshell.php?cmd=whoami
 3. 本地连接目标机器
 ```shell
 ./weevely.py http://ip/webshell.php passwd
-weevely>  
+weevely>
 ```

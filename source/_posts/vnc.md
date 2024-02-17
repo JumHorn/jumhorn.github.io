@@ -1,5 +1,6 @@
 ---
 title: Linux搭建VNC，以及使用novnc
+date: 2022-02-15 00:00:00
 tags: 技术
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: 如何使用cloudflare zero trust
+date: 2022-02-15 00:00:00
 tags: 技术
 ---
 

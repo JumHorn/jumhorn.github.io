@@ -1,5 +1,6 @@
 ---
 title: 如何在debian机器上使用kali源
+date: 2022-02-15 00:00:00
 tags: 技术
 ---
 

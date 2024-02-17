@@ -1,5 +1,6 @@
 ---
 title: 如何用github action完成定时任务
+date: 2022-02-15 00:00:00
 tags: 技术
 ---
 

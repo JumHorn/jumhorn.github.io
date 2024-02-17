@@ -1,5 +1,6 @@
 ---
 title: 自建KMS服务器激活Windows
+date: 2022-02-15 00:00:00
 tags: 技术
 ---
 

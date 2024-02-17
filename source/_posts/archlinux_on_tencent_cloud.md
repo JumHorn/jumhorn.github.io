@@ -1,5 +1,6 @@
 ---
 title: 腾讯云上安装archlinux
+date: 2022-02-15 00:00:00
 tags: 技术
 ---
 
