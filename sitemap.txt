@@ -29,8 +29,8 @@ https://blog.jumhorn.com/metasploit/
 https://blog.jumhorn.com/nginx-proxy-protocol/
 https://blog.jumhorn.com/nginx-redirect/
 https://blog.jumhorn.com/p2p/
-https://blog.jumhorn.com/seo/
 https://blog.jumhorn.com/set_proxy/
+https://blog.jumhorn.com/seo/
 https://blog.jumhorn.com/ssh_bruteforce_login/
 https://blog.jumhorn.com/strace_debug/
 https://blog.jumhorn.com/ubuntu_mail_server/
