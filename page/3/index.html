@@ -52,7 +52,7 @@
   isHome: true,
   isHighlightShrink: false,
   isToc: false,
-  postUpdate: '2024-01-31 08:50:24'
+  postUpdate: '2024-02-17 05:20:54'
 }</script><noscript><style type="text/css">
   #nav {
     opacity: 1
@@ -176,165 +176,171 @@
     }
     detectApple()
     })(window)</script><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="BlogSpace" type="application/atom+xml">
-</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/favicon.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">43</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">2</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="BlogSpace"><span class="site-name">BlogSpace</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/v2ray_reverse_proxy/" title="用v2ray实现反向代理">用v2ray实现反向代理</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-01-31T08:50:15.483Z" title="Created 2024-01-31 08:50:15">2024-01-31</time></span></div><div class="content">v2ray反向代理为了清晰说明连接方式，这里使用三台机器来说明
-A &lt;==&gt; B &lt;==&gt; C
-A是提供服务的机器，B是代理服务器，C是普通客户端
-
-现在由于网络限制，A只能向B发起连接，B不能主动连接A
-A ==&gt; B &lt;== C
-在这种情况下，C想要访问A的服务就需要用到反向代理
-
-实现过程，由A向B发起v2ray连接，B开通监听端口给C访问，并将C的请求转发给A
-注意B转发给A是通过，A主动连接B产生的反向连接
-
-A机器配置123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657&#123;	&quot;log&quot;: &#123;		&quot;loglevel&quot;: &quot;debug&quot;	&#125;,	&quot;reverse&quot;: &#123;		&quot;bridges&quot;: [			&#123;				&quot;tag&quot;: ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/vnc/" title="Linux搭建VNC，以及使用novnc">Linux搭建VNC，以及使用novnc</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-01-31T08:50:15.483Z" title="Created 2024-01-31 08:50:15">2024-01-31</time></span></div><div class="content">远程桌面连接VNC(Virtual Network Computing)
-协议是通用的和系统无关
-以下用mac连接centos
-
-工具主要工具是Xvnc，在其上层的脚本有vncserver
-
-123456789# CentOS# 安装桌面环境dnf groupinstall &quot;Server with GUI&quot;dnf install tigervnc-server# Ubuntuapt install xserver-xorg-coreapt install tigervnc-standalone-server tigervnc-xorg-extension# Archpacman -S tigervnc
-
-配置
-添加vnc用户,设置密码
-123456# 设置密码vncpasswd# 启动vnc服务vncserver  # vncserver :0(set display to :0)# ubuntu默认localhost无法从外网访问解决方法vncserver -localhost no
-允许使用剪切板
- 编辑$home&#x2F;admin&#x2F;.vnc&# ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/vpn/" title="自建VPN服务">自建VPN服务</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-01-31T08:50:15.483Z" title="Created 2024-01-31 08:50:15">2024-01-31</time></span></div><div class="content">创建vpn服务器用PPTP/L2TP创建vpn服务
-想要使用vpn将多台公网服务器共同组建成局域网服务器
-
-PPTP工具1dnf install pptpd
-配置
-ip配置
- 编辑&#x2F;etc&#x2F;pptpd.conf localip是服务器的局域网ip remoteip是客户端的局域网ip
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/favicon.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">43</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">2</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="BlogSpace"><span class="site-name">BlogSpace</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/database_service/" title="云服务之数据库推荐">云服务之数据库推荐</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2022-02-15T00:00:00.000Z" title="Created 2022-02-15 00:00:00">2022-02-15</time></span></div><div class="content">云数据库MySQL
+planetscale
+ 需要加密连接,直接使用网页端连接,选择branch目前还点不进去 只能自己修改url
 
 
-12localip 192.168.0.1remoteip 192.168.0.100-200
+
+https://app.planetscale.com/jumhorn/daily/main/console
 
 
-用户配置
- 编辑&#x2F;etc&#x2F;ppp&#x2F;chap-secrets 其中*表示任意ip
+SQLPub
+ 免费500M空间
+
+Free MySQL Hosting
+ 5M免费空间，支持phpMyAdmin
 
 
-1234# client server passwd ipclient1 pptpd 123 *client2 pptpd 223 *client3 pptpd 323 *
+postgreSQL
+ElephantSQL
+ 20M免费空间
 
 
-重启pptpd服务
-1systemctl restart pptpd
-
-允许转发数据包(IP packet forwarding)
-12345vim /etc/sysctl.conf# add the followingnet.ipv4.ip_forward = 1# enable itsysct ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/webapp/" title="网站开源模块汇总">网站开源模块汇总</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-01-31T08:50:15.483Z" title="Created 2024-01-31 08:50:15">2024-01-31</time></span></div><div class="content">网页模块查找技术已经成型的开源网页模块
-
-登录与验证(authentication)
-Auth0
-SuperTokens
-authentik
-OpenIAM
-
-论坛(forum)
-NodeBB
-MyBB
-phpBB
-discourse
-flarum
-
-博客(blog)
-Ghost
-hexo
-jekyll
-WordPress
-
-文档编辑(editor)
-etherpad
-OnlyOffice
-Collabora Online
-firepad
-
-</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/webhosting/" title="网页服务平台">网页服务平台</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-01-31T08:50:15.483Z" title="Created 2024-01-31 08:50:15">2024-01-31</time></span></div><div class="content">web hosting云建站
-
-新技术新技术使用nodejs,python等技术,创建的站点也更加灵活
-获取站点权限,可以使用docker,wetty等
-
-vercel可以从github导入网站,支持各种js框架
-
-netlify支持从git型导入网站，支持添加自定义域名
-
-streamlitrenderEvenNodeCyclicheroku可以将应用部署到该网站,2022.11.28收费
-
-旧技术旧技术一般是静态建站，使用了PHP相关技术较多
-当然使用php技术的站点，都可以尝试取系统权限
-
-参考:
-
-phpshell
-
-wordpress免费站点都是广告，基本无法使用
-
-x10hosting免费部署网站，提供mysql数据库
-
-wid同wordpress，只能写page
-
-</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/webshells_php/" title="PHP webshell 漏洞">PHP webshell 漏洞</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-01-31T08:50:15.483Z" title="Created 2024-01-31 08:50:15">2024-01-31</time></span></div><div class="content">webshells通过PHP脚本获取webshell
-
-PHP函数system()1234&lt;?php// Return the user the script is running undersystem(&quot;whoami&quot;);?&gt;
-
-exec()123456789101112131415&lt;?php// Executes but returns nothingexec(&quot;ls -la&quot;);?&gt;&lt;?php// Executes, returns only last line of the outputecho exec(&quot;ls -la&quot;);?&gt;&lt;?php// Executes, returns the output in an arrayexec(&quot;ls -la&quot;,$array);print_r($array);?&gt;
-
-shellexec()1234&lt;?php// Executes, returns the entire output as a string ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/webssh/" title="建立webssh服务">建立webssh服务</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-01-31T08:50:15.483Z" title="Created 2024-01-31 08:50:15">2024-01-31</time></span></div><div class="content">webssh通过网页http协议ssh登录获取终端
-最终效果通过域名shell.jumhorn.eu.org访问网页ssh客户端
-
-安装1pip3 install webssh
-
-配置使用nginx反向代理
-
-123456789101112131415server &#123;	listen 80;	server_name shell.jumhorn.eu.org;	location / &#123;		proxy_pass  http://127.0.0.1:8888;		proxy_http_version 1.1;		proxy_read_timeout 300;		proxy_set_header Upgrade $http_upgrade;		proxy_set_header Connection &quot;upgrade&quot;;		proxy_set_header Host $http_host;		proxy_set_header X-Real-IP $remote_addr;		proxy_set_header X-Real-PORT $remote_port; ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/DDOS/" title="一条命令实现DDOS">一条命令实现DDOS</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-01-31T08:50:15.479Z" title="Created 2024-01-31 08:50:15">2024-01-31</time></span></div><div class="content">一条命令实现DDOS攻击这个工具可太强了，一会就把路由器发崩溃了，局域网的电脑也连不上了
-
-工具
-hping3
-
-123456# debianapt install hping3# macbrew install hping# centosbrew install hping3
-
-SYN DDOS攻击工具使用方法
-
-12345# -S specifies sending SYN packets# -p 80 targets port 80# -i u20 waits 20 microseconds between packets = 50,000# packets per secondsudo hping3 -i u20 -S -p 80 -c 50000 ip(x.x.x.x)
-
-隐藏自身IP地址模拟出多个IP攻击主机的情况
-其实SYN攻击，只需要发送SYN包，返回的包根本不处理
-所以SYN包的source_address可以随机填写
-
-123# --rand-source    random source address mode# --flood	   sent packets  ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/README/" title="仅为乐趣而写博客">仅为乐趣而写博客</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-01-31T08:50:15.479Z" title="Created 2024-01-31 08:50:15">2024-01-31</time></span></div><div class="content">blogjust for fun
-ideas
- 
-安装和使用anbox
-
- 
-在centos上搭建vpn
-
- 
-多台公网服务器组建局域网
-  使用vpn
-
- 
-建立查找开放端口的对应IP服务
-
- 
-暴力破解wifi密码
-
- 
-mysql命令行登录的密码加密了吗
-  如果截获报文是可以看到客户端和服务器的机器类型的
-
- 
-搭建邮箱服务器
-  创建邮件列表相当于一个公用邮箱的转发和群发
+Redis
+Redis
+ 30M免费空间
 
 
-</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/android_emulator_linux/" title="Linux上使用Android模拟器">Linux上使用Android模拟器</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-01-31T08:50:15.479Z" title="Created 2024-01-31 08:50:15">2024-01-31</time></span></div><div class="content">安装android模拟器在centos上安装anbox
+MongoDB
+MongoDB
+ 512MB to 5GB of storage
 
 
-https://github.com/anbox/anbox
+</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/debian_docker/" title="在dockerhub上创建debian docker，备份自己的主机">在dockerhub上创建debian docker，备份自己的主机</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2022-02-15T00:00:00.000Z" title="Created 2022-02-15 00:00:00">2022-02-15</time></span></div><div class="content">debian docker image使用了9年半的笔记本坏了，笔记本一直用的debian系统，现在又不想买笔记本，又离不开debian系统
+所以在此制作docker镜像并推送到dockerhub,来纪念我使用过的debian(bullseye)
 
-工具
-snap1234567891011# install snapdnf install snapd# make snap use proxy to download fastersnap install snap-store-proxysnap install snap-store-proxy-client# start snapd serversystemctl enable --now snapd.socket# enable classic snap supportln -s /var/lib/snapd/snap /snap
-anbox1snap install anbox
+software
+gnome&#x2F;xfce&#x2F;kde
+vncserver
+novnc
 
-配置使用FAQ</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/2/#content-inner"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/#content-inner">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/#content-inner">4</a><a class="page-number" href="/page/5/#content-inner">5</a><a class="extend next" rel="next" href="/page/4/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/favicon.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">JumHorn</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">43</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">2</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/JumHorn"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">BlogSpace</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/cloudflare_zero_trust/" title="如何使用cloudflare zero trust">如何使用cloudflare zero trust</a><time datetime="2024-01-31T08:50:15.483Z" title="Created 2024-01-31 08:50:15">2024-01-31</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/create_mail_server/" title="如何自建邮件服务器">如何自建邮件服务器</a><time datetime="2024-01-31T08:50:15.483Z" title="Created 2024-01-31 08:50:15">2024-01-31</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/database_service/" title="云服务之数据库推荐">云服务之数据库推荐</a><time datetime="2024-01-31T08:50:15.483Z" title="Created 2024-01-31 08:50:15">2024-01-31</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/debian_docker/" title="在dockerhub上创建debian docker，备份自己的主机">在dockerhub上创建debian docker，备份自己的主机</a><time datetime="2024-01-31T08:50:15.483Z" title="Created 2024-01-31 08:50:15">2024-01-31</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/download_video_audio_from_website/" title="如何下载网页上的视频">如何下载网页上的视频</a><time datetime="2024-01-31T08:50:15.483Z" title="Created 2024-01-31 08:50:15">2024-01-31</time></div></div></div></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>Tags</span></div><div class="card-tag-cloud"><a href="/tags/%E6%8A%80%E6%9C%AF/" style="font-size: 1.5em; color: #99a9bf">技术</a> <a href="/tags/%E4%BF%A1%E6%81%AF/" style="font-size: 1.1em; color: #999">信息</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>Archives</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/01/"><span class="card-archive-list-date">January 2024</span><span class="card-archive-list-count">36</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/10/"><span class="card-archive-list-date">October 2023</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/09/"><span class="card-archive-list-date">September 2023</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/05/"><span class="card-archive-list-date">May 2023</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/04/"><span class="card-archive-list-date">April 2023</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/03/"><span class="card-archive-list-date">March 2023</span><span class="card-archive-list-count">1</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article :</div><div class="item-count">43</div></div><div class="webinfo-item"><div class="item-name">UV :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">PV :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Last Push :</div><div class="item-count" id="last-push-date" data-lastPushDate="2024-01-31T08:50:24.229Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By JumHorn</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
+Dockerfile以下是ChatGPT的例子
+
+1234567891011121314# 基础镜像FROM debian:bullseye-slim# 安装必要的软件包RUN apt-get update &amp;&amp; apt-get install -y \    x11vnc \    websockify \    novnc# 配置novnc服务的端口号EXPOSE 8080# 运行novnc服务CMD [&quot;websockify&quot;, &quot;--web=/usr/share/novnc/&quot;, &quot;8080&quot;, &quot;--&quot;, &quot;x11vnc&qu ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/download_video_audio_from_website/" title="如何下载网页上的视频">如何下载网页上的视频</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2022-02-15T00:00:00.000Z" title="Created 2022-02-15 00:00:00">2022-02-15</time></span></div><div class="content">用浏览器直接下载视频和音频学会这项技能的学习资料不是javascript，不是chrome debug
+而是http协议
+
+
+https://developer.mozilla.org/zh-CN/docs/Web/HTTP
+
+下载音频使用bing translator为例子
+https://cn.bing.com/translator
+
+
+F12打开浏览器调试界面，打开network标签页，并清空该标签页
+firefox直接类型选择media,chrome需要all
+输入文本，点击试听，浏览器会播放一段音频
+找到对应语音的post请求
+目前是v1那个请求，右键copy as cURL
+terminal中复制刚才的命令并加上–output tts.mp3
+完成下载即可
+
+浏览器直接播放该音频
+在刚下载好的音频目录，启动http服务器1python3 -m http.server
+浏览器console标签页12audio = new Audio(&quot;http://localhost:8000/tts.mp3&quot;);audio.play();
+
+下载视频目前可行的通用方法是 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/github_action/" title="如何用github action完成定时任务">如何用github action完成定时任务</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2022-02-15T00:00:00.000Z" title="Created 2022-02-15 00:00:00">2022-02-15</time></span></div><div class="content">github action使用github action所创建的虚拟机
+
+创建github action在项目上方Actions点击后，创建一个workflow即可
+本质上就是在项目中建立.github/workflow/*.yaml文件
+
+建立虚拟机shell</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/github_wiki/" title="如何写github wiki">如何写github wiki</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2022-02-15T00:00:00.000Z" title="Created 2022-02-15 00:00:00">2022-02-15</time></span></div><div class="content"></div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/http_request/" title="如何使用不同方式发送http请求">如何使用不同方式发送http请求</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2022-02-15T00:00:00.000Z" title="Created 2022-02-15 00:00:00">2022-02-15</time></span></div><div class="content">http请求发送http请求,通过命令行或者代码方法
+&gt; https://curlconverter.com
+
+cURL123curl -H &quot;Content-Type:text/html&quot; www.google.com # headcurl www.google.com?cmd=&quot;ls -al&quot; # getcurl --data &quot;param1=value1&amp;param2=value2&quot; www.google.com # post
+
+javascript fetch123456789101112131415161718//headfetch(&#x27;http://www.google.com&#x27;, &#123;    headers: &#123;        &#x27;Content-Type&#x27;: &#x27;text/html&#x27;    &#125;&#125;);// getfetch(&#x27;http://www.google.com?cmd=ls -al&#x27 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/kali_repositories_on_debian/" title="如何在debian机器上使用kali源">如何在debian机器上使用kali源</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2022-02-15T00:00:00.000Z" title="Created 2022-02-15 00:00:00">2022-02-15</time></span></div><div class="content">在debian系统上添加kali源突然想要用到kali,但是不想安装.但是kali是基于debian的，想到区别应该不大，把源加上就行了
+
+添加kali源编辑/etc/apt/sources.list
+
+12345# debiandeb http://mirrors.ustc.edu.cn/debian/ bullseye main non-free contribdeb-src http://mirrors.ustc.edu.cn/debian/ bullseye main non-free contrib# kalideb http://mirrors.ustc.edu.cn/kali/ kali-rolling main non-free contrib
+
+添加kali官方密钥1wget -q -O - https://archive.kali.org/archive-key.asc | apt-key add
+
+更新源1apt update
+
+奇葩想法
+在debian上安装pacman
+
+</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/kms/" title="自建KMS服务器激活Windows">自建KMS服务器激活Windows</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2022-02-15T00:00:00.000Z" title="Created 2022-02-15 00:00:00">2022-02-15</time></span></div><div class="content">kms微软windows/office激活工具(Key Management Services)
+微软连接https://learn.microsoft.com/en-us/windows-server/get-started/kms-create-host
+这里是要创建linux版的激活服务器
+项目基于https://github.com/Wind4/vlmcsd
+
+工具直接从github.com/Wind4/vlmcsd下载可执行文件
+如需编译，自行编译
+
+1wget https://github.com/Wind4/vlmcsd/releases/download/svn1113/binaries.tar.gz
+
+配置启动服务即可
+
+12# create a server listening on 1688./vlmcsd
+
+使用
+Windows激活
+ 在需要激活的windows上执行如下命令(带管理员的cmd)
+
+
+1234567# 输入激活密钥slmgr.vbs -ipk VDYBN-27WPP-V4HQT-9VMD4-VMK7H# 连接kms服务器slmgr.vbs -sk ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/lightweight_linux_desktop_environment/" title="Linux上轻量桌面对比">Linux上轻量桌面对比</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2022-02-15T00:00:00.000Z" title="Created 2022-02-15 00:00:00">2022-02-15</time></span></div><div class="content">性能消耗最小的linux desktop使用的是只有2G内存的CentOS云服务器，尝试一下desktop
+
+linux系统切换桌面环境使用vnc连接桌面,编辑$HOME/.vnc/xstartup
+
+
+让vnc启动Xfce桌面环境
+1/etc/X11/xinit/xinitrc
+
+关闭vnc
+1vncserver -kill :1
+
+gnomegnome一开就占用500M空间，且不用的情况下，内存占用还会扩大，作为桌面还是可以的，
+但是作为服务器就差强人意了
+
+Xfce
+安装
+1dnf groupinstall &quot;Xfce&quot;
+启动
+ 编辑$HOME&#x2F;.vnc&#x2F;xstartup
+
+
+12# /etc/X11/xinit/xinitrcstartxfce4
+
+
+测评
+ 实际使用空间在300M，比gnome好很多了
+
+
+lxde
+安装
+1pacman -S lxde
+启动
+ 编辑$HOME&#x2F;.vnc&#x2F;xstartup
+
+
+12# /etc/X11/xinit/xinitrcexec startlxde
+
+
+测评
+ 实际空间使用在1 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/linux_everywhere/" title="无处不在的linux云服务">无处不在的linux云服务</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2022-02-15T00:00:00.000Z" title="Created 2022-02-15 00:00:00">2022-02-15</time></span></div><div class="content">cloud serverIBM LinuxONEIBM教育免费服务器，支持免费用120天
+
+inteljupter 10小时使用时长，250G内存，CPU豪华级配置
+devcloud 16G 支持使用120天
+
+woiden云主机使用telegram注册，可以使用7天，可以持续续期.
+共享公网IP的NAT VPS，可以使用反向代理
+[登录IPv6](https://ssh.hax.co.id/)
+
+alwaysdata100M免费空间,可以使用ssh登录,创建定时任务
+
+cloud shell分享各种提供linux shell的云服务
+
+xshellz提供的shell可以连续运行15天
+
+google cloud shell有5G免费空间，可以用tmux一直保持运行,网页版本身就是tmux,每周50小时限制
+
+github codespaces有8G内存,32G空间,写代码专用,30分钟无活动自动关闭
+
+github actions可以创建定时任务
+
+red hat openshift30天免费试用,等待90天后可以再次使用
+功能太多，目前找到sandbox ide也非常好用
+http ...</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/2/#content-inner"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/#content-inner">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/#content-inner">4</a><a class="page-number" href="/page/5/#content-inner">5</a><a class="extend next" rel="next" href="/page/4/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/favicon.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">JumHorn</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">43</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">2</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/JumHorn"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">BlogSpace</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/README/" title="仅为乐趣而写博客">仅为乐趣而写博客</a><time datetime="2024-02-17T05:20:39.379Z" title="Created 2024-02-17 05:20:39">2024-02-17</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/letsencrypt/" title="如何让网站使用https">如何让网站使用https</a><time datetime="2024-02-15T00:00:00.000Z" title="Created 2024-02-15 00:00:00">2024-02-15</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/git_proxy/" title="git命令的代理配置">git命令的代理配置</a><time datetime="2024-01-29T19:00:00.000Z" title="Created 2024-01-29 19:00:00">2024-01-29</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/nginx-proxy-protocol/" title="nginx在stream模式下如何将客户端真实IP传递给服务端">nginx在stream模式下如何将客户端真实IP传递给服务端</a><time datetime="2024-01-28T16:13:15.000Z" title="Created 2024-01-28 16:13:15">2024-01-28</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/strace_debug/" title="跟踪系统调用进行调试">跟踪系统调用进行调试</a><time datetime="2023-10-05T19:47:42.000Z" title="Created 2023-10-05 19:47:42">2023-10-05</time></div></div></div></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>Tags</span></div><div class="card-tag-cloud"><a href="/tags/%E4%BF%A1%E6%81%AF/" style="font-size: 1.1em; color: #999">信息</a> <a href="/tags/%E6%8A%80%E6%9C%AF/" style="font-size: 1.5em; color: #99a9bf">技术</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>Archives</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/02/"><span class="card-archive-list-date">February 2024</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/01/"><span class="card-archive-list-date">January 2024</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/10/"><span class="card-archive-list-date">October 2023</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/09/"><span class="card-archive-list-date">September 2023</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/05/"><span class="card-archive-list-date">May 2023</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/04/"><span class="card-archive-list-date">April 2023</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/03/"><span class="card-archive-list-date">March 2023</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/02/"><span class="card-archive-list-date">February 2022</span><span class="card-archive-list-count">32</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article :</div><div class="item-count">43</div></div><div class="webinfo-item"><div class="item-name">UV :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">PV :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Last Push :</div><div class="item-count" id="last-push-date" data-lastPushDate="2024-02-17T05:20:54.000Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By JumHorn</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
