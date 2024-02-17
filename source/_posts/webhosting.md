@@ -36,7 +36,7 @@ tags: 信息
 	当然使用php技术的站点，都可以尝试取系统权限
 [//]: # "参考[phpshell](webshells_php.md)"
 	参考:
-	{% post_link webshells_php "phpshell" %}
+{% post_link webshells_php "phpshell" %}
 
 ## [wordpress](https://wordpress.com)
 
