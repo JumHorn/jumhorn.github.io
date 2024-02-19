@@ -68,10 +68,12 @@ published: false
 2. 读多写少场景异步实现(线程池，MQ)
 
 # 数据库
-1. 缓存
 2. 事务的实现方式undolog,redolog,binlog
-3. 事务锁的分类和使用方式(gap lock,shared lock,exclusive lock,recursive lock)
 4. 三层B+树可以存储多少行数据
+
+* {% post_link mysql_isolation "mysql isolation" %}
+* {% post_link mysql_transaction_lock "mysql transaction lock" %}
+* {% post_link mysql_log "mysql log" %}
 
 # 运维
 1. docker，qemu等虚拟化技术
