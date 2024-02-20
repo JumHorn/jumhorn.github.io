@@ -1,0 +1,212 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>数据库事务的隔离级别 | BlogSpace</title><meta name="author" content="JumHorn"><meta name="copyright" content="JumHorn"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="ACID原子性(atomicity)一致性(consistency)隔离性(isolation)持久性(durability)隔离级别(isolation)数据库事务的隔离级别和锁的实现密切相关，理解事务隔离级别，就明白为什么innodb要支持不同的锁， 以及不同隔离级别下，使用不同的锁。业务的设计往往为了并发又要控制锁的粒度  所以学习方向是，先看事务隔离级别，再看锁是满足哪种事务隔离级别，最后">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数据库事务的隔离级别">
+<meta property="og:url" content="https://blog.jumhorn.com/mysql_isolation/index.html">
+<meta property="og:site_name" content="BlogSpace">
+<meta property="og:description" content="ACID原子性(atomicity)一致性(consistency)隔离性(isolation)持久性(durability)隔离级别(isolation)数据库事务的隔离级别和锁的实现密切相关，理解事务隔离级别，就明白为什么innodb要支持不同的锁， 以及不同隔离级别下，使用不同的锁。业务的设计往往为了并发又要控制锁的粒度  所以学习方向是，先看事务隔离级别，再看锁是满足哪种事务隔离级别，最后">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://blog.jumhorn.com/img/favicon.jpg">
+<meta property="article:published_time" content="2024-02-19T17:10:58.000Z">
+<meta property="article:modified_time" content="2024-02-20T07:17:34.833Z">
+<meta property="article:author" content="JumHorn">
+<meta property="article:tag" content="架构">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://blog.jumhorn.com/img/favicon.jpg"><link rel="shortcut icon" href="/img/favicon.jpg"><link rel="canonical" href="https://blog.jumhorn.com/mysql_isolation/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  }
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '数据库事务的隔离级别',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-02-20 07:17:34'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+          const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+          const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+          const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+          if (t === undefined) {
+            if (isLightMode) activateLightMode()
+            else if (isDarkMode) activateDarkMode()
+            else if (isNotSpecified || hasNoSupport) {
+              const now = new Date()
+              const hour = now.getHours()
+              const isNight = hour <= 23 || hour >= 24
+              isNight ? activateDarkMode() : activateLightMode()
+            }
+            window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+              if (saveToLocal.get('theme') === undefined) {
+                e.matches ? activateDarkMode() : activateLightMode()
+              }
+            })
+          } else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="BlogSpace" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/favicon.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">46</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">3</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="BlogSpace"><span class="site-name">BlogSpace</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> About</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">数据库事务的隔离级别</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2024-02-19T17:10:58.000Z" title="Created 2024-02-19 17:10:58">2024-02-19</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2024-02-20T07:17:34.833Z" title="Updated 2024-02-20 07:17:34">2024-02-20</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="数据库事务的隔离级别"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post View:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="ACID"><a href="#ACID" class="headerlink" title="ACID"></a>ACID</h1><h2 id="原子性-atomicity"><a href="#原子性-atomicity" class="headerlink" title="原子性(atomicity)"></a>原子性(atomicity)</h2><h2 id="一致性-consistency"><a href="#一致性-consistency" class="headerlink" title="一致性(consistency)"></a>一致性(consistency)</h2><h2 id="隔离性-isolation"><a href="#隔离性-isolation" class="headerlink" title="隔离性(isolation)"></a>隔离性(isolation)</h2><h2 id="持久性-durability"><a href="#持久性-durability" class="headerlink" title="持久性(durability)"></a>持久性(durability)</h2><h1 id="隔离级别-isolation"><a href="#隔离级别-isolation" class="headerlink" title="隔离级别(isolation)"></a>隔离级别(isolation)</h1><pre><code>数据库事务的隔离级别和锁的实现密切相关，理解事务隔离级别，就明白为什么innodb要支持不同的锁，
+以及不同隔离级别下，使用不同的锁。业务的设计往往为了并发又要控制锁的粒度
+
+所以学习方向是，先看事务隔离级别，再看锁是满足哪种事务隔离级别，最后看binlog,redolog如何实现这些锁
+</code></pre>
+<h2 id="读未提交-READ-UNCOMMITTED"><a href="#读未提交-READ-UNCOMMITTED" class="headerlink" title="读未提交(READ UNCOMMITTED)"></a>读未提交(READ UNCOMMITTED)</h2><pre><code>事务可以读取未提交的数据，可能会导致脏读、不可重复读和幻读问题
+</code></pre>
+<h2 id="读已提交-READ-COMMITTED"><a href="#读已提交-READ-COMMITTED" class="headerlink" title="读已提交(READ COMMITTED)"></a>读已提交(READ COMMITTED)</h2><pre><code>事务只能读取已经提交的数据，避免了脏读，但仍可能出现不可重复读和幻读问题
+</code></pre>
+<h2 id="可重复读-REPEATABLE-READ"><a href="#可重复读-REPEATABLE-READ" class="headerlink" title="可重复读(REPEATABLE READ)"></a>可重复读(REPEATABLE READ)</h2><pre><code>保证了事务在执行过程中读取的数据是一致的，即使其他事务对数据进行了修改也不会影响当前事务的查询结果。但仍可能出现幻读问题
+</code></pre>
+<h2 id="序列化-SERIALIZABLE"><a href="#序列化-SERIALIZABLE" class="headerlink" title="序列化(SERIALIZABLE)"></a>序列化(SERIALIZABLE)</h2><pre><code>通过强制事务串行执行来避免脏读、不可重复读和幻读。但是这可能会降低并发性能
+</code></pre>
+<h1 id="FAQ"><a href="#FAQ" class="headerlink" title="FAQ"></a>FAQ</h1><ol>
+<li><p>脏读</p>
+<p> 指一个事务读取了另一个事务尚未提交的数据。假设有两个事务 A 和 B，事务 A 读取了事务 B 修改但尚未提交的数据，然后事务 B 回滚了修改。这时事务 A 读取到的数据就是脏数据，因为它是基于一个未提交的修改</p>
+</li>
+<li><p>不可重复读</p>
+<p> 指一个事务在两次查询之间，另一个事务更新了新的数据，导致第一个事务在第二次查询中发现了新插入的数据</p>
+</li>
+<li><p>幻读</p>
+<p> 指一个事务在两次查询之间，另一个事务插入或者删除了新的数据，导致第一个事务在第二次查询中发现了新插入的数据</p>
+</li>
+<li><p>查看mysql事务隔离级别</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> @<span class="variable">@transaction</span>_ISOLATION;</span><br><span class="line"><span class="keyword">SELECT</span> @<span class="variable">@global</span>.transaction_ISOLATION;</span><br><span class="line"></span><br><span class="line"><span class="keyword">or</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">SELECT</span> @<span class="variable">@tx</span>_ISOLATION;</span><br><span class="line"><span class="keyword">SELECT</span> @<span class="variable">@global</span>.tx_ISOLATION;</span><br></pre></td></tr></table></figure></li>
+<li><p>修改mysql事务隔离级别</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- 设置隔离级别为 READ UNCOMMITTED</span></span><br><span class="line"><span class="keyword">SET</span> SESSION tx_isolation <span class="operator">=</span> <span class="string">&#x27;READ-UNCOMMITTED&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 设置隔离级别为 READ COMMITTED</span></span><br><span class="line"><span class="keyword">SET</span> SESSION tx_isolation <span class="operator">=</span> <span class="string">&#x27;READ-COMMITTED&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 设置隔离级别为 REPEATABLE READ</span></span><br><span class="line"><span class="keyword">SET</span> SESSION tx_isolation <span class="operator">=</span> <span class="string">&#x27;REPEATABLE-READ&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">-- 设置隔离级别为 SERIALIZABLE</span></span><br><span class="line"><span class="keyword">SET</span> SESSION tx_isolation <span class="operator">=</span> <span class="string">&#x27;SERIALIZABLE&#x27;</span>;</span><br></pre></td></tr></table></figure></li>
+</ol>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="https://blog.jumhorn.com">JumHorn</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="https://blog.jumhorn.com/mysql_isolation/">https://blog.jumhorn.com/mysql_isolation/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%9E%B6%E6%9E%84/">架构</a></div><div class="post_share"><div class="social-share" data-image="/img/favicon.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/mysql_log/" title="数据库日志"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">Previous Post</div><div class="prev_info">数据库日志</div></div></a></div><div class="next-post pull-right"><a href="/mysql_transaction_lock/" title="数据库事务的锁"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">数据库事务的锁</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>Related Articles</span></div><div class="relatedPosts-list"><div><a href="/mysql_log/" title="数据库日志"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-02-19</div><div class="title">数据库日志</div></div></a></div><div><a href="/mysql_transaction_lock/" title="数据库事务的锁"><div class="cover" style="background: var(--default-bg-color)"></div><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2024-02-18</div><div class="title">数据库事务的锁</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/favicon.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">JumHorn</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">46</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">3</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/JumHorn"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">BlogSpace</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Catalog</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#ACID"><span class="toc-number">1.</span> <span class="toc-text">ACID</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8E%9F%E5%AD%90%E6%80%A7-atomicity"><span class="toc-number">1.1.</span> <span class="toc-text">原子性(atomicity)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E8%87%B4%E6%80%A7-consistency"><span class="toc-number">1.2.</span> <span class="toc-text">一致性(consistency)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9A%94%E7%A6%BB%E6%80%A7-isolation"><span class="toc-number">1.3.</span> <span class="toc-text">隔离性(isolation)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8C%81%E4%B9%85%E6%80%A7-durability"><span class="toc-number">1.4.</span> <span class="toc-text">持久性(durability)</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%9A%94%E7%A6%BB%E7%BA%A7%E5%88%AB-isolation"><span class="toc-number">2.</span> <span class="toc-text">隔离级别(isolation)</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%BB%E6%9C%AA%E6%8F%90%E4%BA%A4-READ-UNCOMMITTED"><span class="toc-number">2.1.</span> <span class="toc-text">读未提交(READ UNCOMMITTED)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%BB%E5%B7%B2%E6%8F%90%E4%BA%A4-READ-COMMITTED"><span class="toc-number">2.2.</span> <span class="toc-text">读已提交(READ COMMITTED)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%AF%E9%87%8D%E5%A4%8D%E8%AF%BB-REPEATABLE-READ"><span class="toc-number">2.3.</span> <span class="toc-text">可重复读(REPEATABLE READ)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BA%8F%E5%88%97%E5%8C%96-SERIALIZABLE"><span class="toc-number">2.4.</span> <span class="toc-text">序列化(SERIALIZABLE)</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#FAQ"><span class="toc-number">3.</span> <span class="toc-text">FAQ</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/mysql_log/" title="数据库日志">数据库日志</a><time datetime="2024-02-19T17:45:39.000Z" title="Created 2024-02-19 17:45:39">2024-02-19</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/mysql_isolation/" title="数据库事务的隔离级别">数据库事务的隔离级别</a><time datetime="2024-02-19T17:10:58.000Z" title="Created 2024-02-19 17:10:58">2024-02-19</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/mysql_transaction_lock/" title="数据库事务的锁">数据库事务的锁</a><time datetime="2024-02-18T22:24:41.000Z" title="Created 2024-02-18 22:24:41">2024-02-18</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/letsencrypt/" title="如何让网站使用https">如何让网站使用https</a><time datetime="2024-02-15T00:00:00.000Z" title="Created 2024-02-15 00:00:00">2024-02-15</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/git_proxy/" title="git命令的代理配置">git命令的代理配置</a><time datetime="2024-01-29T19:00:00.000Z" title="Created 2024-01-29 19:00:00">2024-01-29</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By JumHorn</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
