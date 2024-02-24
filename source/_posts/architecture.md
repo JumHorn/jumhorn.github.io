@@ -68,8 +68,6 @@ published: false
 2. 读多写少场景异步实现(线程池，MQ)
 
 # 数据库
-2. 事务的实现方式undolog,redolog,binlog
-4. 三层B+树可以存储多少行数据
 
 * {% post_link mysql_isolation "mysql isolation" %}
 * {% post_link mysql_transaction_lock "mysql transaction lock" %}
