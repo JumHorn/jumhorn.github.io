@@ -2,33 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://blog.jumhorn.com/vpn/</loc>
-    
-    <lastmod>2024-02-29</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.jumhorn.com/webapp/</loc>
-    
-    <lastmod>2024-02-29</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.jumhorn.com/webhosting/</loc>
-    
-    <lastmod>2024-02-29</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.jumhorn.com/webshells_php/</loc>
     
     <lastmod>2024-02-29</lastmod>
@@ -155,6 +128,15 @@
   </url>
   
   <url>
+    <loc>https://blog.jumhorn.com/cpp_assembly/</loc>
+    
+    <lastmod>2024-02-29</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.jumhorn.com/create_mail_server/</loc>
     
     <lastmod>2024-02-29</lastmod>
@@ -263,7 +245,7 @@
   </url>
   
   <url>
-    <loc>https://blog.jumhorn.com/letsencrypt/</loc>
+    <loc>https://blog.jumhorn.com/kms/</loc>
     
     <lastmod>2024-02-29</lastmod>
     
@@ -272,7 +254,7 @@
   </url>
   
   <url>
-    <loc>https://blog.jumhorn.com/kms/</loc>
+    <loc>https://blog.jumhorn.com/letsencrypt/</loc>
     
     <lastmod>2024-02-29</lastmod>
     
@@ -335,7 +317,7 @@
   </url>
   
   <url>
-    <loc>https://blog.jumhorn.com/nginx-proxy-protocol/</loc>
+    <loc>https://blog.jumhorn.com/nginx-redirect/</loc>
     
     <lastmod>2024-02-29</lastmod>
     
@@ -344,7 +326,7 @@
   </url>
   
   <url>
-    <loc>https://blog.jumhorn.com/nginx-redirect/</loc>
+    <loc>https://blog.jumhorn.com/nginx-proxy-protocol/</loc>
     
     <lastmod>2024-02-29</lastmod>
     
@@ -398,7 +380,7 @@
   </url>
   
   <url>
-    <loc>https://blog.jumhorn.com/strace_debug/</loc>
+    <loc>https://blog.jumhorn.com/ubuntu_mail_server/</loc>
     
     <lastmod>2024-02-29</lastmod>
     
@@ -407,7 +389,7 @@
   </url>
   
   <url>
-    <loc>https://blog.jumhorn.com/ubuntu_mail_server/</loc>
+    <loc>https://blog.jumhorn.com/strace_debug/</loc>
     
     <lastmod>2024-02-29</lastmod>
     
@@ -426,6 +408,33 @@
   
   <url>
     <loc>https://blog.jumhorn.com/vnc/</loc>
+    
+    <lastmod>2024-02-29</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.jumhorn.com/vpn/</loc>
+    
+    <lastmod>2024-02-29</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.jumhorn.com/webapp/</loc>
+    
+    <lastmod>2024-02-29</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.jumhorn.com/webhosting/</loc>
     
     <lastmod>2024-02-29</lastmod>
     
