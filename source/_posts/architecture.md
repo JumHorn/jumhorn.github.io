@@ -8,8 +8,8 @@ published: false
 # 代码
 
 ## 算法
-1. 神奇的篇章，全是技巧
-2. 正则表达式
+
+* {% post_link regex "Regular Expression" %}
 
 ## 编程语言
 1. 学习C++就要理解编译器，理解编译器就要反编译
@@ -68,6 +68,7 @@ published: false
 2. 读多写少场景异步实现(线程池，MQ)
 
 # 数据库
+1. sql优化
 
 * {% post_link mysql_isolation "mysql isolation" %}
 * {% post_link mysql_transaction_lock "mysql transaction lock" %}
@@ -76,3 +77,6 @@ published: false
 # 运维
 1. docker，qemu等虚拟化技术
 2. Kubernetes部署和扩展
+
+# OpenGL
+1. opengl优化

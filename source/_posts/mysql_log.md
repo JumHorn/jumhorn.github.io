@@ -39,3 +39,7 @@ tags: 架构
 2. Next-Key Locking
 
 	如何避免幻读
+
+2. 二阶段提交
+
+	MySQL开启binlog日志的情况下，事务的提交要同时完成redolog和binlog的事务写入，保证redolog和binlog是一致的
