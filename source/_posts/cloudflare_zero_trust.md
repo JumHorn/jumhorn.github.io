@@ -9,7 +9,7 @@ tags: 技术
 	利用内网穿透,暴露本地服务到对应域名。
 	相比于frp,不需要自备服务器,使用cloudflare免费服务即可
 
-## 安装
+## install
 1. repo安装
 ```shell
 apt install cloudflare
@@ -65,6 +65,14 @@ RestartSec=5s
 [Install]
 WantedBy=multi-user.target
 ```
+
+* tunnel tcp traffic
+
+	cloudflare tcp流量使用的同时，需要在客户端也安装cloudflare才能访问，被坑了多次了
+
+* tunnel https traffic
+
+	cloudflare tls证书是cloudflare自己生成的，默认情况下cloudflare和自己的主机走的是http协议，如果自己的主机和cloudflared不是安装在同一个机器上，还需要注意明文传输的问题
 
 # Others
 

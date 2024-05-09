@@ -13,6 +13,7 @@ published: false
 
 ## 编程语言
 
+* {% post_link cpp_syntax "c++ syntax" %}
 * {% post_link cpp_assembly "c++ assembly" %}
 
 ## 编译
