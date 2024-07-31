@@ -72,4 +72,6 @@ oc describe secret robot-token-mhf9x
 oc get sa
 # revoke service account token
 oc delete secret robot-token-mhf9x
+# create service account token
+oc create token your-service-account
 ```
