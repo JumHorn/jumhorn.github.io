@@ -72,6 +72,6 @@ oc describe secret robot-token-mhf9x
 oc get sa
 # revoke service account token
 oc delete secret robot-token-mhf9x
-# create service account token
-oc create token your-service-account
+# create service account token (expire: --duration 2400h)
+oc create token your-service-account --duration 2400h
 ```
